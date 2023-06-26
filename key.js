@@ -1,1 +1,0 @@
-var badge ="790f2a5c3dfdcfcb9ddef25ebad1b9d7"

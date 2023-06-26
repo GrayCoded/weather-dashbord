@@ -7,51 +7,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather Dashboard</title>
   <link rel="stylesheet" type="text/css" href="./assets/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"  
-  href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
-  rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 
-<body >
+<body class="flex-column min-vh-100">
   <header class="container-fluid">
     <h3>Weather Dashboard</h3>
   </header>
-    <div class="container-a float-start">
+
+  <main class="flex-row justify-space-between">
+    <div class="col-12 col-md-4">
+
       <div class="search-container">
         <h3 id="search-title">Search by City:</h3>
-        <form>
-          <input name="search-city" id="search-city" type="text" placeholder="Fredericton" />
-          <button type="submit" id="search-btn">Search</button>
+        <form id="search-form">
+          <input name="city" id="city" type="text" autofocus="true" placeholder="Fredericton" />
+          <button type="submit" class="btn">Search</button>
         </form>
       </div>
-      <div class="city-container">
-        <div class="col-1">
-          <ul class="city-buttons">
-            <button data-city="Edmonton" class="city-btn">Edmonton</button>
-            <button data-city="Calgary" class="city-btn">Calgary</button>
-            <button data-city="Saskatoon" class="city-btn">Saskatoon</button>
-            <button data-city="Ottawa" class="city-btn">Ottawa</button>
-            <button data-city="Winnipeg" class="city-btn">Winnipeg</button>
-            <button data-city="Toronto" class="city-btn">Toronto</button>
-            <button data-city="Halifax" class="city-btn">Halifax</button>
-            <button data-city="Fredericton" class="city-btn">Fredericton</button>
-            <button data-city="Montreal" class="city-btn">Montreal</button>
-            <button data-city="Vancouver" class="city-btn">Vancouver</button>
-          </ul>
-        </div>
-      </div> 
+
+      <div>
+        <h2 class="subtitle">Searched Cities <span id="city-search"></span></h2>
+        <div class="city-container" class="list-group"></div>
+      </div>
+
     </div>
-    <div class="conatiner-b float-end">
+    <div class="col-12 col-md-8">
+      
       <div id="current-container">
         <h2>Current Weather for: <span id="city-search"></span></h2>
         <div id="weather-container"></div>
       </div>
+
       <div id="forecast-container">
         <h3>5 Day Forecast:</h3>
         <div id="forecast-container" class="list-group"></div>
       </div>
+
     </div>
-      <script src="./assets/script.js"></script>
+  </main>
+
+
+
+
+
+
+  <script src="./assets/script.js"></script>
+
 </body>
 
 </html>
