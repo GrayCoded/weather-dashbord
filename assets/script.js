@@ -1,21 +1,42 @@
-var searchFormEl = document.querySelector('#search-form')
-var nameInputEl = document.querySelector('#city');
-var currentWeatherEl = document.querySelector('#weather-container');
-var listedCity = document.querySelector('#city-container');
-var newBadge = "f2a5c3dfdcfcb9ddef25ebad1b9d7";
 
 
+var searchHistory = [];
+var weatherApiRootUrl = 'https://api.openweathermap.org';
+var Badge = "f2a5c3dfdcfcb9ddef25ebad1b9d7";
 
+var searchForm = document.querySelector('#search-form')
+var searchCity = document.querySelector('#search-input')
+var todayContainer = document.querySelector('#weather-card')
+var searchHistoryContainer = document.querySelector('#history-container')
 
+function displaySearchHistory() {
+  searchHistoryContainer.innerHTML = '';
 
-fetch('https://api.openweathermap.org/data/2.5/weather?lat=57&lon=-2.15&appid=f2a5c3dfdcfcb9ddef25ebad1b9d7&units=metric', {
-  method: 'GET',
-  credentials: 'same-origin',
-  redirect: 'follow', //
-})
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
+  for (var i = searchHistory.length - 1; i >= 0; i--) {
+    var btn = document.createElement('button');
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('today forecast');
+    btn.classList.add('sCity', 'btn-sCity');
+    btn.setAttribute('data-search', searchHistory[i]);
+    btn.textContext = searchHistory[i];
+    searchHistoryContainer.append(btn);
+  }
+}
+
+function addCity(search) {
+  if (searchHistory.indexOf(search) !==-1) {
+    return;
+  }
+  searchHistory.push(search);
+
+  localStorage.setItem('search-history',JSON.stringify(searchHistory));
+  displaySearchHistory();
+}
+
+function getCities() {
+  var storedCities = localStorage.getItem('search-history');
+  if (storedCities) {
+    searchHistory = JSON.parse(storedCities);
+  }
+  displaySearchHistory();
+}
