@@ -78,7 +78,7 @@ function renderCurrentWeather(city, weather) {
 }
 
 function renderForecast(forecastData) {
-  var forecastCards = document.querySelectorAll('.forecast-cards .card');
+  var forecastCards = document.querySelectorAll('card');
 
   forecastCards.forEach(function(card, index) {
     var forecast = forecastData[index];
