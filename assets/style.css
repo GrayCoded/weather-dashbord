@@ -1,87 +1,226 @@
-body {
-    background-color: white;
-   
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    
+
+
 }
-
-
+body {
+        background-color: rgb(25, 25, 25);
+        min-height: 100vh;
+}
 header {
     display: flex;
-    justify-content: flex-end;
-    padding: 15px;
-    border-bottom: 3.5px solid navy;
-    background-color: blue;
-    color: azure;
-    width: 100%;
-
-}
-
-.search-container {
+    flex-direction: row;
     justify-content: space-between;
-    height: 200px;
-    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+    border: 5px solid navy;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url(./weather-photos/1283869-large-hurricane-wallpaper-2048x2048.jpg);
+    background-size: cover;
+    background-position: fixed;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #1332fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+}
+
+header h3 {
+    padding: 20px;
+    margin: 10px;
+    background-color: transparent;
+    color: rgb(red, green, blue);
+    text-shadow: -3px 5px 2px black;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
     
-    border-bottom: 3px solid black;
-    width: 300px;
-    border-right: 3px solid black;
 }
-
-
-
-#search-city {
-    width: 200px;
-}
-
-#search-btn {
-    border-radius: 8px;
-    margin-top: 15px;
-    background-color: blue;
-    color: aliceblue;
-    margin-bottom: 15px;
-    width: 75px;
-}
-
-#search-btn:hover { 
-    transform: scale(1.1);
-    outline: ridge 2px rgba(134, 121, 249, 0.296);
-
-}
-
-.city-container {
+aside {
+    flex: 1;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    float:left;
+   
+    
+
+}
+section {
+    flex: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-card {
+    background-image: url(./weather-photos/stuinsf-scaled.jpg);
+    border: 5px solid navy;
+    border-radius: 20px;
+    height: 200px;
+    margin-bottom: 20px;
+    min-width: 250px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #1332fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+}
+
+h3 {
+    background-color: blue transparent;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 25px
+}
+
+.search-card textarea {
+    
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+.search-card button {
+    background-color: rgb(94, 156, 176);
+    border-radius: 20px;
+    margin: 20px;
+    color: black;
+    height: 25px;
+}
+
+.history-container {
+    background-image: url(./weather-photos/stuinsf-scaled.jpg);
+    border: 5px solid navy;
+    border-radius: 20px;
+    height: fit-content;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #1332fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+    
+}
+
+.weather-card {
+    background-image: url(./weather-photos/stuinsf-scaled.jpg);
+    border: 5px solid navy;
+    border-radius: 20px;
+    height: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #1332fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+    
+}  
+
+.weather-card ul {
+    list-style: none;
+    border-radius: 20px;
+    height: 180px;
+    width: 180px;
+    background-color: transparent;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #1332fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
 }
 
 
 
-#weather-container {
+.forecast-container {
+    background-image: url(./weather-photos/stuinsf-scaled.jpg);
+    border: 5px solid navy;
+    border-radius: 20px;
+    height: fit-content;
+    min-width: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
     align-content: center;
-    width: 750px;
-    border: 3px solid black;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #1332fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+
+  
 }
 
-#forecast-container {
-   margin-top: 50px;
-   width: 800px;justify-content: space-around;
+.weather-info {
+    margin-left: 20px;
+    min-width: 300px;
+    border-radius: 20px;
+    width: 900px;
+    flex-shrink: 3;
+}
+
+.user-info {
+    margin-right: 20px;
+    margin-left: 20px;
+    min-width: 300px;
+}
+
+.forecast-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: row;
+    height: fit-content;
+    list-style: none;
+    background-color: transparent;
+    
     
 }
 
-#current-container {
-    margin-top: 50px;
-    margin-right: 200px;
+.forecast-cards ul{
+    list-style: none;
+    border-radius: 20px;
+    height: 150px;
+    width: 100px;
+    background-color: transparent;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #1332fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
 }
 
-.city-btn {
-    border-radius: 8px;
-    border: 2px solid navy;
-    background-color: whitesmoke;
-    font-size: 15px;
-    margin-top: 10px;
-    width: 150px;
-}
-
-.city-btn:hover {
-    transform: scale(1.1);
-    
+.current-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: row;
+    height: 300px;
+    list-style: none;
+    background-color: transparent;
 }
