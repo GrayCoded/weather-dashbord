@@ -19,7 +19,7 @@
           <form id="search-form">
             <h3 for="name">Search City</h3>
             <input input="name" class="form-input" id="search-input" name="search-input" placeholder="Enter City Name"/>
-            <button type="search">Search</button>
+            <button type="submit" id="search-btn">Search</button>
           </form>
           <div id="history-container">
             <h3>Search History</h3>
@@ -27,55 +27,59 @@
         </aside>
         <section class="today-info"> 
             <div class="weather-card">
-              <h3 id="city"></h3>
-              <div class="current-card">
-                <ul>
-                  <li class="date"></li>
-                  <li class="icon"></li>
-                  <li class="temp"></li>
-                  <li class="humidty"></li>
-                </ul>
+              <h3 id="searched-city"></h3>
+                <div class="current-card">
+                  <p class="date"></p>
+                  <img class="icon" src="">
+                  <p class="wind"></p>
+                  <p class="temp"></p>
+                  <p class="humidity"></p>
+                  <p class=""></p>
               </div>
             </div>
-          <div clas="forecast-container">
+          <div class="forecast-container">
             <h3>5-Day Forecast</h3>
-            <div class="forecast-cards">
-                <ul>
-                  <li class="date"></li>
-                  <li class="icon"></li>
-                  <li class="temp"></li>
-                  <li class="humidty"></li>
-                </ul>
-            
-                <ul>
-                  <li class="date"></li>
-                  <li class="icon"></li>
-                  <li class="temp"></li>
-                  <li class="humidty"></li>
-                </ul>
-              
-            
-                <ul>
-                  <li class="date"></li>
-                  <li class="icon"></li>
-                  <li class="temp"></li>
-                  <li class="humidty"></li>
-                </ul>
-            
-                <ul>
-                  <li class="date"></li>
-                  <li class="icon"></li>
-                  <li class="temp"></li>
-                  <li class="humidty"></li>
-                </ul>
-            
-                <ul>
-                  <li class="date"></li>
-                  <li class="icon"></li>
-                  <li class="temp"></li>
-                  <li class="humidty"></li>
-                </ul>
-              
+            <div class="forecast">
+              <div class="card" id="card-1">
+                <p class="date"></p>
+                <img class="icon" src="">
+                <p class="wind"></p>
+                <p class="temp"></p>
+                <p class="humidity"></p>
+                <p class=""></p>
+              </div>
+              <div class="card" id="card-2">
+                <p class="date"></p>
+                <img class="icon" src="">
+                <p class="wind"></p>
+                <p class="temp"></p>
+                <p class="humidity"></p>
+                <p class=""></p>
+              </div>
+              <div class="card" id="card-3">
+                <p class="date"></p>
+                <img class="icon" src="">
+                <p class="wind"></p>
+                <p class="temp"></p>
+                <p class="humidity"></p>
+                <p class=""></p>
+              </div>
+              <div class="card" id="card-4">
+                <p class="date"></p>
+                <img class="icon" src="">
+                <p class="wind"></p>
+                <p class="temp"></p>
+                <p class="humidity"></p>
+                <p class=""></p>
+              </div>
+              <div class="card" id="card-5">
+                <p class="date"></p>
+                <img class="icon" src="">
+                <p class="wind"></p>
+                <p class="temp"></p>
+                <p class="humidity"></p>
+                <p class=""></p>
+              </div>
             </div>
           </div>
         </section>
