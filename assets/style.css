@@ -1,7 +1,7 @@
 * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: aliceblue;
-    
+
 
 
 }
@@ -58,6 +58,8 @@ section {
     flex-direction: column;
     justify-content: center;
 }
+
+
 
 #search-form {
     background-image: url(./weather-photos/stuinsf-scaled.jpg);
@@ -145,6 +147,7 @@ h3 {
     background-image: url(./weather-photos/stuinsf-scaled.jpg);
     border: 5px solid navy;
     border-radius: 20px;
+    padding: 10px;
     height: fit-content;
     margin-bottom: 20px;
     display: flex;
@@ -159,6 +162,10 @@ h3 {
     
 }  
 
+
+.weather-card img {
+    margin-left: 10px;
+}
 
 
 
@@ -178,9 +185,9 @@ h3 {
               0 0 0.8rem #bc13fe,
               0 0 2.8rem #bc13fe,
               inset 0 0 1.3rem #bc13fe;
-
-  
 }
+
+
 
 #today-info {
     margin-left: 20px;
@@ -210,19 +217,18 @@ h3 {
     
 }
 
-.forecast-cards ul{
-    list-style: none;
-    border-radius: 20px;
-    height: 150px;
-    width: 100px;
-    background-color: transparent;
+ .forecast-card {
+    text-align: center;
+    margin: 25px ;
+    min-height: 210px;
+    min-width: 150px;
     box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 2rem #1332fe,
-              0 0 0.8rem #bc13fe,
-              0 0 2.8rem #bc13fe,
-              inset 0 0 1.3rem #bc13fe;
-}
+    0 0 .2rem #fff,
+    0 0 2rem #1332fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+ }
 
 .current-card {
     display: flex;
